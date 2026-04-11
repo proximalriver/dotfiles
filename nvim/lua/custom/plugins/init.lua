@@ -14,9 +14,17 @@ return {
       view_options = {
         show_hidden = true,
       },
+      default_file_explorer = true,
+      coulmns = {
+        'icon',
+        'mtime',
+        'size',
+      },
     },
     dependencies = { { 'nvim-mini/mini.icons', opts = {} } },
     lazy = false,
-    config = function() require('oil').setup() end,
+    keys = {
+      { '<C-q>', '<CMD>Oil<CR>', desc = 'Oil to parent dir' },
+    },
   },
 }
